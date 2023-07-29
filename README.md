@@ -3,7 +3,7 @@ Resolve tun2soxks loopback problem on Linux, when using 127.0.0.1 socks
 
 #!/bin/bash
 
-sudo ip route add default via 192.168.43.1 table 110
+sudo ip route add default via 192.168.43.1 dev enp3s0 metric 1 table 110
 
 sudo ip rule add uidrange 1001-1001 lookup 110 pref 29000
 
