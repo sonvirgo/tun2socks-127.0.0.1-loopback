@@ -23,5 +23,5 @@ sudo ip route add default via 198.18.0.1 dev tun0 metric 1
 
 sudo ip route add default via 192.168.43.1 dev enp3s0 metric 10
 
-tun2socks -device tun0 -proxy socks5://127.0.0.1:2088 -interface enp3s0
+tun2socks -device tun0 -proxy socks5://127.0.0.1:2088
 
