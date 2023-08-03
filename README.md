@@ -1,6 +1,8 @@
 # tun2socks-127.0.0.1-loopback
 Resolve tun2soxks loopback problem on Linux, when using 127.0.0.1 socks
 
+Possible to use uidrange or cgroup by policy based rouitng
+
 #!/bin/bash
 
 sudo ip route add default via 192.168.43.1 dev enp3s0 metric 1 table 110
@@ -25,3 +27,4 @@ sudo ip route add default via 192.168.43.1 dev enp3s0 metric 10
 
 tun2socks -device tun0 -proxy socks5://127.0.0.1:2088
 
+#In case of Windows 10 OS, use SSTAP + ForceBindIp
