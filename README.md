@@ -27,4 +27,4 @@ sudo ip route add default via 192.168.43.1 dev enp3s0 metric 10
 
 tun2socks -device tun0 -proxy socks5://127.0.0.1:2088
 
-#In case of Windows 10 OS, use SSTAP + ForceBindIp
+#In case of Windows 11 OS, use SSTAP + FỏceBindIp64
