@@ -31,6 +31,8 @@ tun2socks -device tun0 -proxy socks5://127.0.0.1:2088
 
 #To persist ICS consult this https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/ics-not-work-after-computer-or-service-restart
 
+netsh interface ip reset
+
 for /f "tokens=3 delims=: " %%i  in ('netsh interface ip show config name^="Wi-Fi 3" ^| findstr "IP Address"') do set IP=%%i
 
 D:\Portables\Psiphon3\ForceBindIP64.exe -i %IP% D:\Portables\Psiphon3\psiphon-tunnel-core-x86_64.exe -config D:\Portables\Psiphon3\psiphone.conf
