@@ -28,6 +28,7 @@ sudo ip route add default via 192.168.43.1 dev enp3s0 metric 10
 tun2socks -device tun0 -proxy socks5://127.0.0.1:2088
 
 #In case of Windows 11 OS, use SSTAP Beta + ForceBindIP64 optout for tun2socks
+
 #To persist ICS consult this https://learn.microsoft.com/en-us/troubleshoot/windows-client/networking/ics-not-work-after-computer-or-service-restart
 
 for /f "tokens=3 delims=: " %%i  in ('netsh interface ip show config name^="Wi-Fi 3" ^| findstr "IP Address"') do set IP=%%i
