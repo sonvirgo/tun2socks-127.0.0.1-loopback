@@ -6,9 +6,9 @@ Possible to use uidrange or cgroup by policy based rouitng in Linux
 
 Done!
 
-        Ubuntu NAT Router requires only 1 NIC.
+        Ubuntu NAT Router requires only 1 NIC with Ip Forward ON.
 
-        Windows NAT Router requires 2 NICs.
+        Windows NAT Router requires 2 NICs with Ip Forward OFF.
 
 I change my Wifi card.
 
