@@ -1,7 +1,22 @@
 # tun2socks-127.0.0.1-loopback
-Resolve tun2soxks loopback problem on Linux and Windows 11, when using 127.0.0.1 socks
+
+Resolve tun2socks loopback problem on Linux and Windows 11, when using 127.0.0.1 socks
 
 Possible to use uidrange or cgroup by policy based rouitng in Linux
+
+Done!
+
+I change my Wifi card.
+
+Also disable systemd-resolve.
+
+Some how it works.
+
+Don't know the cause, however.
+
+Now tun2socks work as NAT Router, beautifully forwarding Ethernet to Wifi TUN interface, both in Linux and Windows.
+
+Can't figure out how to make it work on Darwin, as loopback is not resolved in macOS.
 
 #!/bin/bash
 
