@@ -1,10 +1,14 @@
 # tun2socks-127.0.0.1-loopback
 
-Resolve tun2socks loopback problem on Linux and Windows 11, when using 127.0.0.1 socks
+Resolve tun2socks loopback problem on both Linux and Windows 11, when using 127.0.0.1 socks
 
 Possible to use uidrange or cgroup by policy based rouitng in Linux
 
 Done!
+
+Ubuntu NAT Router requires only 1 NIC.
+
+        Windows NAT Router requires 2 NICs.
 
 I change my Wifi card.
 
