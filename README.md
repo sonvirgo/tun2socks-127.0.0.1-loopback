@@ -6,7 +6,7 @@ Possible to use uidrange or cgroup by policy based rouitng in Linux
 
 Done!
 
-Ubuntu NAT Router requires only 1 NIC.
+        Ubuntu NAT Router requires only 1 NIC.
 
         Windows NAT Router requires 2 NICs.
 
