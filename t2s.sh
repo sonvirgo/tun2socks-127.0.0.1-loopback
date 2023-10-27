@@ -22,4 +22,6 @@ sudo ip rule add uidrange 1001-1001 lookup 110 pref 29000
 
 cd /home/psiphon
 
-pkexec --user psiphon ./psiphon-tunnel-core-x86_64 --config psiphone.conf 
+#pkexec --user psiphon ./psiphon-tunnel-core-x86_64 --config psiphone.conf 
+
+nohup echo 1234 | sudo -S -u psiphon ./psiphon-tunnel-core-x86_64 --config psiphone.conf
