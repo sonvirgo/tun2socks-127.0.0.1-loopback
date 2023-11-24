@@ -3,7 +3,7 @@
 #/Sy*/L*/Priv*/Apple8*/V*/C*/R*/airport -I | awk '/ SSID:/ {print $2}' | grep 'Code.Gurus' > /dev/null && {
 #cd  /Applications/t2s 
 pass=1234
-nohup echo pass | sudo -S  ./tun2socks -device utun123 -proxy socks5://192.168.43.1:2088 -interface en0  > /dev/null 2>&1&
+nohup echo pass | sudo -S  ./tun2socks-darwin-amd64 -device utun123 -proxy socks5://192.168.43.1:2088 -interface en0  > /dev/null 2>&1&
 sleep 10
 echo $pass | sudo -S ifconfig utun123 198.18.0.1 198.18.0.1 up
 echo $pass | sudo -S route add -net 1.0.0.0/8 198.18.0.1
