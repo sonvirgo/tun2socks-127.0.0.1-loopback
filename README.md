@@ -10,6 +10,8 @@ Done!
 
         Windows NAT Router requires 2 NICs with Ip Forward OFF.
 
+        mcaOS no NAT Router solution.
+
 I change my Wifi card.
 
 Also disable systemd-resolve.
