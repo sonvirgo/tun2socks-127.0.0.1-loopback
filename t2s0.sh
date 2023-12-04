@@ -16,6 +16,6 @@ echo $pass | sudo -S route add -net 64.0.0.0/2 198.18.0.1
 echo $pass | sudo -S route add -net 128.0.0.0/1 198.18.0.1
 echo $pass | sudo -S route add -net 198.18.0.0/15 198.18.0.1
 #cd /Applications/httpdate-main
-#echo $pass | sudo -S ./httpdate -s 142.250.105.139
+echo $pass  | sudo -S ./htpdate-mac-x64  -s -C  '[date  ]MMDDHHmmYY'  http://142.250.105.139 
 #}
 
