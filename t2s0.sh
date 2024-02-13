@@ -9,6 +9,11 @@ do
 done
 
 {
+#exp
+echo $pass | sudo -S route add -net x.x.x.0/24 192.168.1.250
+nohup /Users/virgo/psiphon-tunnel-core-x86_64 --config /Users/virgo/psiphone.conf > /dev/null 2>&1&
+#end exp
+
 pass=1234
 nohup echo $pass | sudo -S  ./tun2socks-darwin-amd64  -device utun123 -proxy socks5://192.168.43.134:2088 -interface en1  > /dev/null 2>&1&
 sleep 5
