@@ -14,3 +14,8 @@ echo $pass | sudo -S route delete -net 32.0.0.0/3 198.18.0.1
 echo $pass | sudo -S route delete -net 64.0.0.0/2 198.18.0.1
 echo $pass | sudo -S route delete -net 128.0.0.0/1 198.18.0.1
 echo $pass | sudo -S route delete -net 198.18.0.0/15 198.18.0.1
+
+#exp
+echo $pass | sudo -S route delete -net x.x.x.0/24 198.168.1.250
+#end exp
+
