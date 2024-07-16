@@ -22,8 +22,9 @@ Don't know the cause, however.
 
 Now tun2socks work as NAT Router, beautifully forwarding Ethernet to Wifi TUN interface, both in Linux and Windows.
 
-Can't figure out how to make it work on Darwin, as loopback is not resolved in macOS.
+Can't figure out how to make it work on Darwin.
 
+```
 #!/bin/bash
 
 sudo ip tuntap add mode tun dev tun0
@@ -45,6 +46,7 @@ sudo ip route add default via 192.168.43.1 dev enp3s0 metric 1 table 110
 sudo ip rule add uidrange 1001-1001 lookup 110 pref 29000
 
 pkexec --user psiphon  ./psiphon-tunnel-core-x86_64  --config psiphone.conf
+```
 
 #In case of Windows 11 OS, use SSTAP Beta + ForceBindIP64 optout for tun2socks
 
@@ -52,11 +54,19 @@ pkexec --user psiphon  ./psiphon-tunnel-core-x86_64  --config psiphone.conf
 
 https://github.com/loxia01/PSInternetConnectionSharing 
 
+```
 netsh interface ip reset
 
 for /f "tokens=3 delims=: " %%i  in ('netsh interface ip show config name^="Wi-Fi 3" ^| findstr "IP Address"') do set IP=%%i
 
 D:\Portables\Psiphon3\ForceBindIP64.exe -i %IP% D:\Portables\Psiphon3\psiphon-tunnel-core-x86_64.exe -config D:\Portables\Psiphon3\psiphone.conf
+```
+To scan large CIDR run
+```
+type NUL>StdErr.temp
+start powershell -c Get-Content StdErr.temp -Wait
+psiphon-tunnel-core-x86_64.exe -scan 203.113.0.0/16 -config psiphon.config 2>StdErr.temp
+```
 
 
 
