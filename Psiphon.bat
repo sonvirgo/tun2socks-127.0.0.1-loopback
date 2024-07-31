@@ -1,4 +1,5 @@
 @echo off
+
 d:
 cd  d:\progs\VPN
 
@@ -84,9 +85,15 @@ netsh interface ipv4 set interface wintun metric=6
 
 rem start /B  d:\progs\VPN\dispatch.exe start --port 3080  %IP%@7 192.168.123.1@3
 
-rem cd C:\Users\virgosun\AppData\Local\SSTap-beta
+for /f "tokens=*" %%i in ('netsh int ipv4 show interfaces ^| find "wintun"') do set str=%%i
 
-rem start "" C:\Users\virgosun\AppData\Local\SSTap-beta\SSTap.exe
+set /A num=str
+
+route add 0.0.0.0 mask 0.0.0.0 192.168.123.1 IF %num% metric 5
+
+c:
+cd C:\Users\virgosun\AppData\Local\SSTap-beta
+start "" C:\Users\virgosun\AppData\Local\SSTap-beta\SSTap.exe
 
 rem :FOUND2
 
@@ -102,14 +109,7 @@ rem goto FOUND2
 
 rem )
 
-rem netsh int ipv4 add route 0.0.0.0/0 wintun 192.168.123.1   
-
-for /f "tokens=*" %%i in ('netsh int ipv4 show interfaces ^| find "wintun"') do set str=%%i
-
-set /A num=str
-
-route add 0.0.0.0 mask 0.0.0.0 192.168.123.1 IF %num% metric 5
-
+d:
 cd  d:\progs\VPN
 
 TIMEOUT /T 10	
