@@ -17,6 +17,9 @@ if errorlevel 1 (
 
 )  
 
+set "gwip="
+for /f "tokens=1-2 delims=:" %%a in ('ipconfig^|find "Default"') do if not defined ip set gwip=%%b
+
 rem netsh int ipv4 add route 125.235.36.0/24 "Ethernet" 192.168.1.250
 
 for /f "tokens=*" %%i in ('netsh int ipv4 show interfaces ^| find "Ethernet"') do set str=%%i
